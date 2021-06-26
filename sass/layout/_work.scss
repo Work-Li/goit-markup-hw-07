@@ -1,21 +1,21 @@
-﻿.work .section {
+﻿.work__container {
   padding-top: 0;
 }
 
-.work .list {
+.work__list {
   display: flex;
 }
 
-.work .list-item:not(:last-child) {
+.work__list-item:not(:last-child) {
   margin-right: 30px;
 }
 
-.work .list-item {
+.work__list-item {
   width: 370px;
   position: relative;
 }
 
-.wrapper-title {
+.work__wrapper-title {
   background-color: var(--wrapper-title);
   position: absolute;
   width: 100%;
@@ -24,7 +24,7 @@
 
 }
 
-.wrapper-title .list-item-title {
+.work__list-item-title {
   color: var(--white-color);
   text-transform: uppercase;
   margin-bottom: 0;
