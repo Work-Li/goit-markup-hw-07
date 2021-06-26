@@ -1,0 +1,21 @@
+﻿.advantages .list-item-title {
+  text-transform: uppercase;
+}
+
+.advantages .list-item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.advantages .list {
+  display: flex;
+}
+
+.advantages .list-item {
+  width: calc((100% - 90px) / 4);
+}
+.thumb .icon-item {
+  width: 70px;
+  height: 70px;
+  margin-left: auto;
+  margin-right: auto;
+}

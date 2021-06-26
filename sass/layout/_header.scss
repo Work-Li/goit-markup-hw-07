@@ -1,0 +1,48 @@
+﻿.page-header {
+  border-bottom: 1px solid var(--border-line-color);
+
+}
+.page-header__container {
+  display: flex;
+  padding-top: 24px;
+  padding-bottom: 25px;
+}
+
+.page-header__menu {
+  display: flex;
+  align-items: center;
+}
+
+.page-header__logo {
+  margin-right: 93px;
+}
+
+.nav-menu {
+  display: flex;
+  color: var(--basis-text-color);
+  font-weight: 500;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+
+}
+
+.nav-menu__item:not(:last-child),
+.header-contact__item:not(:last-child) {
+  margin-right: 50px;
+}
+
+.page-header__contact {
+  margin-left: auto;
+}
+.header-contact {
+  display: flex;
+  color: var(--secondary-text-color);
+  align-items: center;
+}
+
+.header-contact__icon {
+  margin-right: 10px;
+  fill: currentColor;
+}
+
+

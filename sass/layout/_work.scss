@@ -1,0 +1,34 @@
+﻿.work .section {
+  padding-top: 0;
+}
+
+.work .list {
+  display: flex;
+}
+
+.work .list-item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.work .list-item {
+  width: 370px;
+  position: relative;
+}
+
+.wrapper-title {
+  background-color: var(--wrapper-title);
+  position: absolute;
+  width: 100%;
+  height: 70px;
+  bottom: 0px;
+
+}
+
+.wrapper-title .list-item-title {
+  color: var(--white-color);
+  text-transform: uppercase;
+  margin-bottom: 0;
+  text-align: center;
+  padding-top: 27px;
+  padding-bottom: 27px;
+}
