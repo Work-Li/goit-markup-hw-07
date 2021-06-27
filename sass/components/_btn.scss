@@ -47,3 +47,37 @@
   text-align: start;
 
 }
+.btn--filter-style {
+  height: auto;
+  width: auto;
+  background-color: var(--background-btn-color);
+  color: var(--basis-text-color);
+  box-sizing: content-box;
+  line-height: 1.62;
+  font-weight: 500;
+  letter-spacing: 0.03em;
+  padding: 6px 22px;
+
+
+}
+
+.btn--filter-style-active {
+  box-sizing: content-box;
+  font-weight: 500;
+  line-height: 1.62;
+  padding: 6px 22px;
+  letter-spacing: 0.03em;
+  background-color: var(--active-color);
+  color: var(--white-color);
+
+}
+
+.btn--filter-style:hover,
+.btn--filter-style:focus,
+.btn--filter-style:active {
+  background-color: var(--active-color);
+  color: var(--white-color);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1),
+    0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
+}

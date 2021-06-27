@@ -1,14 +1,14 @@
-﻿.wrapper-card {
+﻿.portfolio-card__wrapper {
   position: relative;
   overflow: hidden;
 }
 
-.portfolio-card:hover .wrapper-description,
-.portfolio-card:hover .wrapper-card::before {
+.portfolio-card:hover .portfolio-card__wrapper-description,
+.portfolio-card:hover .portfolio-card__wrapper::before {
   transform: translateY(0);
 }
 
-.wrapper-card::before {
+.portfolio-card__wrapper::before {
   content: "";
   position: absolute;
   top: 0;
@@ -21,7 +21,7 @@
 
 }
 
-.wrapper-description {
+.portfolio-card__wrapper-description {
   height: 294px;
   position: absolute;
   top: 0;
@@ -33,7 +33,7 @@
 
 }
 
-.wrapper-text {
+.portfolio-card__wrapper-text {
   color: var(--white-color);
   margin: 0;
   font-size: 18px;   
