@@ -1,5 +1,5 @@
 ﻿.page-header {
-  border-bottom: 1px solid var(--border-line-color);
+  border-bottom: 1px solid $border-line-color;
 
 }
 .page-header__container {
@@ -9,8 +9,7 @@
 }
 
 .page-header__menu {
-  display: flex;
-  align-items: center;
+ @extend %flex-centered;
 }
 
 .page-header__logo {
@@ -19,10 +18,9 @@
 
 .nav-menu {
   display: flex;
-  color: var(--basis-text-color);
-  font-weight: 500;
-  line-height: 1.14;
-  letter-spacing: 0.02em;
+  color: $secondary-text-color;
+  @include font (500, 14, 1.14, 0.02);
+  
 
 }
 
@@ -36,7 +34,7 @@
 }
 .header-contact {
   display: flex;
-  color: var(--secondary-text-color);
+  color: $primary-text-color;
   align-items: center;
 }
 

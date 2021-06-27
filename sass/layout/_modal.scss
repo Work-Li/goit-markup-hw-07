@@ -4,16 +4,17 @@
   top: 0;
   width: 100%;
   height: 100%;
-  background-color: var(--backdrop-color);
+  background-color: $backdrop-color;
   opacity: 1;
-  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  @include transition (opacity);
+  
 }
 
 .is-hidden {
   visibility: hidden;
   opacity: 0;
   pointer-events: none;
-  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  @include transition (opacity);
 
 }
 
@@ -27,48 +28,46 @@
   left: 50%;
   transform: translate(-50%, -50%) scale(1);
   width: 528px;
-  background-color: var(--white-color);
-  border: 1px solid var(--border-modal-color);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  background-color: $white-color;
+  border: 1px solid $border-modal-color;
+  @include transition (transform);
   padding: 40px;
 
 }
 
 .modal__close-btn {
+  @extend %flex-centered;
   position: absolute;
   top: 8px;
   right: 8px;
-  display: flex;
   width: 30px;
   height: 30px;
-  background-color: var(--white-color);
+  background-color: $white-color;
   padding: 0;
   border-radius: 50%;
-  border: 1px solid var(--border-modal-color);
-  align-items: center;
-  justify-content: center;
+  border: 1px solid $border-modal-color;
+  
 
+  &:hover .modal__close-icon,
+  &:focus .modal__close-icon {
+    fill: $active-color;
+  }
 }
 
-.modal__close-btn:hover .modal__close-icon,
-.modal__close-btn:focus .modal__close-icon {
-  fill: var(--active-color);
-}
+
 
 .modal__close-icon {
   width: 18px;
   height: 18px;
-  fill: var(--close-btn-color);
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  fill: $close-btn-color;
+  @include transition (fill);
 
 }
 
 .modal-form__title {
   text-align: center;
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 1.15;
-  color: var(--basis-text-color);
+  @include font (700, 20, 1.15, 0.03);
+  color: $secondary-text-color;
   margin-bottom: 12px;
   margin-top: 0;
 }
@@ -86,16 +85,15 @@
 }
 
 .modal-form__label {
-  font-size: 12px;
-  line-height: 1.17;
-  letter-spacing: 0.01em;
+   @include font (400, 12, 1.17, 0.01);
+  
 }
 
 .modal-form__input {
   width: 100%;
   height: 40px;
   margin-top: 4px;
-  border: 1px solid var(--modal-input-border);
+  border: 1px solid $modal-input-border;
   box-sizing: border-box;
   border-radius: 4px;
   padding-left: 42px;
@@ -103,6 +101,18 @@
   transition: outline 250ms cubic-bezier(0.4, 0, 0.2, 1),
     border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
+    &:hover {
+      border-color: $active-color;
+    }
+
+    &:focus {
+      outline: 1px solid $active-color;
+    }
+
+    &:hover+.modal-form__icon-input,
+    &:focus+.modal-form__icon-input {
+      fill: $active-color;
+    }
 }
 
 .modal-form__icon-input {
@@ -113,7 +123,7 @@
   width: 18px;
   height: 18px;
   transform: translateY(150%);
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  @include transition (fill);
 
 }
 
@@ -123,15 +133,13 @@
   padding: 12px 16px;
   margin-bottom: 10px;
   margin-top: 4px;
-}
 
-.modal-form__textarea::placeholder {
-  font-size: 12px;
-  line-height: 1.67;
-  letter-spacing: 0.01em;
-  color: var(--text-placeholder);
-}
+  &::placeholder {
+    @include font (400, 12, 1.67, 0.01);
+    color: $text-placeholder;
+  }
 
+}
 
 .modal-form__polisy {
   position: relative;
@@ -149,7 +157,7 @@
   display: inline-block;
   width: 16px;
   height: 15px;
-  fill: var(--basis-text-color);
+  fill: $secondary-text-color;
 
 }
 
@@ -163,30 +171,18 @@
   clip: rect(0 0 0 0);
   overflow: hidden;
 
+  &:checked+.modal-form__checkbox-icon {
+    fill: transparent;
+    background-image: url(../images/icon-check.svg);
+    background-size: contain;
+    background-origin: content-box;
+  }
 }
 
-.modal-form__checkbox:checked +.modal-form__checkbox-icon {
-  fill: transparent;
-  background-image: url(../images/icon-check.svg);
-  background-size: contain;
-  background-origin: content-box;
-}
 
-.modal-form__input:hover {
-  border-color: var(--active-color);
-}
-
-.modal-form__input:focus {
-  outline: 1px solid var(--active-color);
-}
-
-.modal-form__input:hover+.modal-form__icon-input,
-.modal-form__input:focus+.modal-form__icon-input {
-  fill: var(--active-color);
-}
 .modal-form__checkbox-link {
   text-decoration: underline;
-  color: var(--active-color);
+  color: $active-color;
 }
 
 

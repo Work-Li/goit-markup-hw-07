@@ -6,17 +6,19 @@
   display: flex;
 }
 
-.work__list-item:not(:last-child) {
-  margin-right: 30px;
-}
+
 
 .work__list-item {
   width: 370px;
   position: relative;
+
+  &:not(:last-child) {
+    margin-right: 30px;
+  }
 }
 
 .work__wrapper-title {
-  background-color: var(--wrapper-title);
+  background-color: $wrapper-title;
   position: absolute;
   width: 100%;
   height: 70px;
@@ -25,7 +27,7 @@
 }
 
 .work__list-item-title {
-  color: var(--white-color);
+  color: $white-color;
   text-transform: uppercase;
   margin-bottom: 0;
   text-align: center;
