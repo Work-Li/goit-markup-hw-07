@@ -67,7 +67,7 @@
       <!--фильтр-->
       <section class="portfolio-page">
         <div class="section container">
-          <div class="filter">
+          <div class="filter portfolio-page__filter">
             <ul class="list">
               <li class="list-item">
                 <button type="button" class="btn filter-btn btn-active">
@@ -297,55 +297,67 @@
       </section>
     </main>
     <footer class="footer-page">
-      <div class="section container">
-        <div class="logo-address">
-          <a href="/" lang="en" class="logo link"
-            ><span class="active">Web</span>Studio</a
+      <div class="section container footer-page__container">
+        <div class="logo-contact footer-page__logo-contact">
+          <a href="/" lang="en" class="logo link footer-page__logo"
+            >Web<span class="logo-part logo-part--color-white">Studio</span></a
           >
-          <address class="footer-address">
+          <address class="contact-block footer-page__contact-block">
             <ul class="list">
-              <li class="list-item">
+              <li class="list-item contact-block__item">
                 <a href="#" class="link">г. Киев, пр-т Леси Украинки, 26</a>
               </li>
 
-              <li class="list-item footer-contact">
+              <li class="list-item contact-block__item">
                 <a href="mailto:info@example.com" lang="en" class="link"
                   >info@example.com</a
                 >
               </li>
-              <li class="list-item footer-contact">
+              <li class="list-item contact-block__item">
                 <a href="tel:+380991111111" class="link">+38 099 111 11 11</a>
               </li>
             </ul>
           </address>
         </div>
-        <div class="footer-social-networks">
-          <h3 class="list-item-title">присоединяйтесь</h3>
+        <div class="footer-page__social-networks">
+          <h3 class="list-item-title footer-page__title">присоединяйтесь</h3>
           <ul class="list social-networks">
-            <li class="sn-item">
-              <a href="https://www.instagram.com" class="link footer-link-sn">
-                <svg class="sn-icon">
+            <li class="social-networks__item network">
+              <a
+                href="https://www.instagram.com"
+                class="link network__link network__link--dark-bg"
+              >
+                <svg class="network__icon">
                   <use href="./images/icons.svg#icon-instagram-grey"></use>
                 </svg>
               </a>
             </li>
-            <li class="sn-item">
-              <a href="https://www.twitter.com/" class="link footer-link-sn">
-                <svg class="sn-icon">
+            <li class="social-networks__item network">
+              <a
+                href="https://www.twitter.com/"
+                class="link network__link network__link--dark-bg"
+              >
+                <svg class="network__icon">
                   <use href="./images/icons.svg#icon-twitter"></use>
                 </svg>
               </a>
             </li>
-            <li class="sn-item">
-              <a href="https://www.facebook.com" class="link footer-link-sn">
-                <svg class="sn-icon">
+            <li class="social-networks__item network">
+              <a
+                href="https://www.facebook.com"
+                class="link network__link network__link--dark-bg"
+              >
+                <svg class="network__icon">
                   <use href="./images/icons.svg#icon-facebook"></use>
                 </svg>
               </a>
             </li>
-            <li class="sn-item">
-              <a href="https://www.linkedin.com" class="link footer-link-sn">
-                <svg class="sn-icon">
+            <li class="social-networks__item network">
+              <a
+                href="https://www.linkedin.com"
+                class="link network__link network__link--dark-bg"
+              >
+                <svg class="network__icon">
                   <use href="./images/icons.svg#icon-linkedin"></use>
                 </svg>
               </a>
@@ -353,17 +365,19 @@
           </ul>
         </div>
         <div class="subscription">
-          <h3 class="list-item-title">подпишитесь на рассылку</h3>
+          <h3 class="list-item-title subscription__title">
+            подпишитесь на рассылку
+          </h3>
           <form name="subscription-form" class="subscription-form">
             <input
               type="email"
               name="email"
-              class="subscription-input"
+              class="subscription-form__input"
               placeholder="E-mail"
             />
-            <button type="submit" class="btn subscription-btn">
-              <span class="text-btn">Подписаться</span>
-              <svg class="send-icon">
+            <button type="submit" class="btn btn--padding-10-29">
+              <span class="subscription-form__text-btn">Подписаться</span>
+              <svg class="subscription-form__icon">
                 <use href="./images/icons.svg#send-icon"></use>
               </svg>
             </button>
